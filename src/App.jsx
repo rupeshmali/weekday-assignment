@@ -5,6 +5,7 @@ import Feed from "./pages/feed";
 import Navbar from "./components/common/navbar";
 import { ThemeProvider, createTheme } from "@mui/material/styles";
 import AppWrapper from "./components/common/app-wrapper";
+import Job from "./pages/job";
 
 const theme = createTheme({
   palette: {
@@ -26,6 +27,7 @@ const App = () => {
           <Navbar />
           <Routes>
             <Route path={PATHS.FEED} element={<Feed />} />
+            <Route path={PATHS.JOB}  element={<Job />}  />
           </Routes>
         </BrowserRouter>
       </AppWrapper>
