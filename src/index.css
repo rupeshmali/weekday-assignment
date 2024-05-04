@@ -1,0 +1,10 @@
+*{
+    padding: 0px;
+    margin: 0px;
+}
+/* Container class for specific width */
+.container {
+    max-width: 1200px;
+    width: 100%;
+    margin-inline: auto;
+}
