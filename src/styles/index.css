@@ -50,3 +50,7 @@
 .font-semibold{
     font-weight: 500;
 }
+
+.capitalize{
+    text-transform: capitalize;
+}

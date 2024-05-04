@@ -1,7 +1,7 @@
 import { Avatar, Button, Chip, Stack } from "@mui/material";
 import React from "react";
 
-const JobCard = () => {
+const JobCard = ({ job }) => {
   return (
     <Stack className="job-card" spacing={2}>
       <Chip
@@ -17,34 +17,34 @@ const JobCard = () => {
         variant="outlined"
       />
       <Header
-        companyName={"Globant Inc."}
-        role={"Full-Stack Developer"}
-        location={"Pune, India"}
+        logoUrl={job.logoUrl}
+        companyName={job.companyName}
+        role={job.jobRole}
+        location={job.location}
       />
       <p className="text-md text-subheading">
-        Estimated Salary: Rs. 15 - 40 LPA
+        Estimated Salary: Rs. {job.minJdSalary} - {job.maxJdSalary} LPA
       </p>
       <Stack spacing={0.5}>
         <p className="text-lg text-heading">About Company</p>
         <p className="text-md text-heading font-semibold">About us</p>
         <p className="text-md text-subheading">
-          Narrative is making AI powered data tools for logistics. We
-          standardize and find errors in shipping invoice data for large
-          companies.
+          {job.jobDetailsFromCompany}
         </p>
       </Stack>
       <Stack>
         <p className="text-md text-subheading">Minimum Experience</p>
-        <p className="text-md">3 years</p>
+        <p className="text-md">{job.minExp || 'NA'}</p>
       </Stack>
       <Button
         color={"primary"}
         variant="contained"
         disableElevation
         style={{ textTransform: "capitalize" }}
+        href={job.jdLink}
+        target='_blank'
       >
-        ⚡️
-        Easy Apply
+        ⚡️ Easy Apply
       </Button>
     </Stack>
   );
@@ -52,17 +52,17 @@ const JobCard = () => {
 
 export default JobCard;
 
-const Header = ({ companyName, role, location }) => {
+const Header = ({ logoUrl, companyName, role, location }) => {
   return (
     <Stack direction={"row"} spacing={2} alignItems={"center"}>
       <Avatar
         alt={companyName}
-        src="https://storage.googleapis.com/weekday-assets/airtableAttachment_1713598304367_pl8w8.jpg"
+        src={logoUrl}
       />
       <Stack spacing={0.3}>
         <p className="text-subheading text-sm">{companyName}</p>
-        <p className="text-heading text-md">{role}</p>
-        <p className="text-subheading text-sm">{location}</p>
+        <p className="text-heading text-md capitalize">{role}</p>
+        <p className="text-subheading text-sm capitalize">{location}</p>
       </Stack>
     </Stack>
   );
