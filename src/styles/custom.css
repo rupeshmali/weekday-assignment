@@ -1,0 +1,6 @@
+.page-heading{
+    font-weight: 600;
+    font-size: 24px;
+    color: var(--heading-color);
+    margin-block: 20px;
+}

@@ -1,0 +1,14 @@
+:root{
+    --primary-color: rgb(85, 239, 196);
+    --heading-color: #222;
+    --subheading-color: #555;
+    --border-color: rgba(0,0,0,0.07);
+    --box-shadow: 0px 0px 10px rgba(0,0,0,0.09);
+
+    /* MUI css variable override */
+    --mui-palette-primary-main: rgb(85, 239, 196);
+    --mui-palette-primary-light: rgb(209, 255, 242);
+    --mui-palette-primary-dark: rgb(0, 255, 183);
+    --mui-palette-primary-contrastText: #000;
+  
+}
