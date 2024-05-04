@@ -1,9 +1,12 @@
 import React from "react";
+import Logo from "./logo";
 
 const Navbar = () => {
   return (
     <section className="navbar-container">
-      <div className="container">navbar</div>
+      <nav className="container navbar">
+        <Logo />
+      </nav>
     </section>
   );
 };
