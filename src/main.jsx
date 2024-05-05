@@ -5,9 +5,11 @@ import "./styles/index.css";
 import { configureStore } from "@reduxjs/toolkit";
 import { Provider } from "react-redux";
 import { jobReducer } from "./slices/job.js";
+import { filterReducer } from "./slices/filter.js";
 const store = configureStore({
   reducer: {
     job: jobReducer,
+    filter: filterReducer
   },
 });
 

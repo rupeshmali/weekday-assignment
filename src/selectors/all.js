@@ -9,3 +9,13 @@ export const allJobsSelector = createSelector(
       };
     })
 );
+export const allJobRolesSelector = createSelector(
+  [(state) => state.job.jobs],
+  (jobs) => {
+    const roles = new Set();
+    jobs.forEach((job) => {
+      roles.add(job.jobRole);
+    });
+    return Array.from(roles);
+  }
+);

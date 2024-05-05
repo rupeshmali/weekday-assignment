@@ -2,7 +2,7 @@ import { createSlice } from "@reduxjs/toolkit";
 const initialState = {
     jobs: [],
     companies: [],
-    isFetching: false
+    isFetching: false,
 }
 const jobSlice = createSlice({
     name: 'job',
