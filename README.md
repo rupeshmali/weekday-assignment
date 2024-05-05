@@ -1,5 +1,7 @@
 # Weekday Assignment
 
+### Checkout live demo [here](https://weekday-assignment-hw2o.onrender.com/)
+
 1. Clone this repository.
 ```sh
 git clone https://github.com/rupeshmali/weekday-assignment.git
