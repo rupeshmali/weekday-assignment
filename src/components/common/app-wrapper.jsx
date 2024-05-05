@@ -1,7 +1,7 @@
 import React, { useEffect } from "react";
 import { getJobs } from "../../api/job";
 import { useDispatch, useSelector } from "react-redux";
-import { setJobs } from "../../slices/job";
+import { requestJobs, setJobs } from "../../slices/job";
 import { offsetSelector } from "../../selectors/common";
 
 const AppWrapper = ({ children }) => {
@@ -12,7 +12,7 @@ const AppWrapper = ({ children }) => {
       limit: 10,
       offset,
     };
-
+    dispatch(requestJobs())
     getJobs(data).then(({ data }) => {
         dispatch(setJobs(data.jdList))
     });

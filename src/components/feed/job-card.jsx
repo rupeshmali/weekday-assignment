@@ -6,7 +6,7 @@ import { formatExperience, formatSalary } from "../../utils/formatter";
 import { getJobs } from "../../api/job";
 import { offsetSelector } from "../../selectors/common";
 import { useDispatch, useSelector } from "react-redux";
-import { appendJobs } from "../../slices/job";
+import { requestJobs, setJobs } from "../../slices/job";
 
 const JobCard = ({ job }) => {
   const ref = useRef(null)
@@ -18,8 +18,9 @@ const JobCard = ({ job }) => {
       limit:10,
       offset
     }
+    dispatch(requestJobs())
     const { data } = await getJobs(body)
-    dispatch(appendJobs(data.jdList))
+    dispatch(setJobs(data.jdList))
   }
   useEffect(()=>{
     if(!ref.current) return
