@@ -1,0 +1,1 @@
+export const offsetSelector = (state) => state.job.jobs.length

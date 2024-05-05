@@ -5,10 +5,7 @@ export const allJobsSelector = createSelector(
     jobs.map((job, index) => {
       return {
         ...job,
-        lastJob: index === jobs.length - 1,
+        isLastJob: index === jobs.length - 1,
       };
     })
 );
-
-
-

@@ -1,15 +1,16 @@
 import React, { useEffect } from "react";
 import { getJobs } from "../../api/job";
-import { useDispatch } from "react-redux";
+import { useDispatch, useSelector } from "react-redux";
 import { setJobs } from "../../slices/job";
+import { offsetSelector } from "../../selectors/common";
 
 const AppWrapper = ({ children }) => {
   const dispatch = useDispatch();
-
+  const offset = useSelector(offsetSelector)
   useEffect(() => {
     const data = {
       limit: 10,
-      offset: 0,
+      offset,
     };
 
     getJobs(data).then(({ data }) => {
