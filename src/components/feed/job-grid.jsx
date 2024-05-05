@@ -1,10 +1,11 @@
 import React from "react";
 import JobCard from "./job-card";
 import { useSelector } from "react-redux";
+import { allJobsSelector } from "../../selectors/all";
 
 const JobGrid = () => {
-  const jobs = useSelector((state) => state.job.jobs);
-  console.log({ jobs });
+  const jobs = useSelector(allJobsSelector);
+  console.log({jobs});
   return (
     <div className="job-grid">
       {jobs.map((job) => {
