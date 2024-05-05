@@ -13,12 +13,7 @@ const JobFilter = () => {
   return (
     <div className="filter-grid">
       {/* company name */}
-      <TextField
-        size="small"
-        label="Company name"
-        variant="outlined"
-        color="secondary"
-      />
+      <input type="text" placeholder="Company name" className="filter-input" />
       {/* experience */}
       <ReactSelect
         placeholder="Experience"
@@ -36,7 +31,6 @@ const JobFilter = () => {
         name="role"
         options={roles.map((option) => makeOption(option, capitalize(option)))}
       />
-
       {/* salary */}
       <ReactSelect
         placeholder="Salary"

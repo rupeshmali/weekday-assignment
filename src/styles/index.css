@@ -6,6 +6,7 @@
     padding: 0px;
     margin: 0px;
     font-family: "Outfit", sans-serif;
+    box-sizing: border-box;
 }
 
 /* Container class for specific width */
