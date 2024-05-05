@@ -83,11 +83,12 @@
     border-color: hsl(0, 0%, 80%);
     border-radius: 4px;
     border-style: solid;
-    border-width: 2px;
+    border-width: 1px;
     padding-inline: 10px;
     font-size: 16px;
 }
 
 .filter-input:focus {
     border-color: #2584FF;
+    border-width: 2px;
 }
